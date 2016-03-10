@@ -12,4 +12,6 @@
 
 - (void)getClassTest;
 
+- (void) getClassName;
+
 @end

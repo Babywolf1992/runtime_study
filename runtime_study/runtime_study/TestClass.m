@@ -18,4 +18,10 @@
     NSLog(@"%@",NSStringFromClass(aClass));
 }
 
+- (void) getClassName {
+    CustomClass *obj = [CustomClass new];
+    NSString *className = [NSString stringWithCString:object_getClassName(obj) encoding:NSUTF8StringEncoding];
+    NSLog(@"className:%@",className);
+}
+
 @end
