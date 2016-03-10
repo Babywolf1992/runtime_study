@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9E04A91F1C915FCA003D0A5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E04A91E1C915FCA003D0A5C /* main.m */; };
 		9E04A9271C916166003D0A5C /* CustomClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E04A9261C916166003D0A5C /* CustomClass.m */; };
+		9E04A92A1C916746003D0A5C /* OtherClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E04A9291C916746003D0A5C /* OtherClass.m */; };
+		9E04A92D1C9169A5003D0A5C /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E04A92C1C9169A5003D0A5C /* TestClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,10 @@
 		9E04A91E1C915FCA003D0A5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9E04A9251C916166003D0A5C /* CustomClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomClass.h; sourceTree = "<group>"; };
 		9E04A9261C916166003D0A5C /* CustomClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomClass.m; sourceTree = "<group>"; };
+		9E04A9281C916746003D0A5C /* OtherClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherClass.h; sourceTree = "<group>"; };
+		9E04A9291C916746003D0A5C /* OtherClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherClass.m; sourceTree = "<group>"; };
+		9E04A92B1C9169A5003D0A5C /* TestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestClass.h; sourceTree = "<group>"; };
+		9E04A92C1C9169A5003D0A5C /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				9E04A91E1C915FCA003D0A5C /* main.m */,
+				9E04A92B1C9169A5003D0A5C /* TestClass.h */,
+				9E04A92C1C9169A5003D0A5C /* TestClass.m */,
 				9E04A9251C916166003D0A5C /* CustomClass.h */,
 				9E04A9261C916166003D0A5C /* CustomClass.m */,
+				9E04A9281C916746003D0A5C /* OtherClass.h */,
+				9E04A9291C916746003D0A5C /* OtherClass.m */,
 			);
 			path = runtime_study;
 			sourceTree = "<group>";
@@ -123,8 +133,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E04A92D1C9169A5003D0A5C /* TestClass.m in Sources */,
 				9E04A91F1C915FCA003D0A5C /* main.m in Sources */,
 				9E04A9271C916166003D0A5C /* CustomClass.m in Sources */,
+				9E04A92A1C916746003D0A5C /* OtherClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
