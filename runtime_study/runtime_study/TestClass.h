@@ -12,6 +12,10 @@
 
 - (void)getClassTest;
 
-- (void) getClassName;
+- (void)getClassName;
+
+- (void)oneParam;
+
+- (void)twoParam;
 
 @end

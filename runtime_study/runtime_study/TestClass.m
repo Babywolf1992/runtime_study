@@ -12,16 +12,47 @@
 
 @implementation TestClass
 
-- (void) getClassTest {
+- (void)getClassTest {
     CustomClass *obj = [CustomClass new];
     Class aClass = object_getClass(obj);
     NSLog(@"%@",NSStringFromClass(aClass));
 }
 
-- (void) getClassName {
+- (void)getClassName {
     CustomClass *obj = [CustomClass new];
     NSString *className = [NSString stringWithCString:object_getClassName(obj) encoding:NSUTF8StringEncoding];
     NSLog(@"className:%@",className);
+}
+
+int cfunction(id self, SEL _cmd, NSString *str) {
+    NSLog(@"%@",str);
+    return 10;
+}
+
+void cfunction2(id self, SEL _cmd, NSString *str, NSString *name) {
+    NSLog(@"%@,%@",str,name);
+}
+
+- (void)oneParam {
+    CustomClass *instance = [CustomClass new];
+    class_addMethod([CustomClass class], @selector(ocMethod:), (IMP)cfunction, "i@:@");
+    
+    if ([instance respondsToSelector:@selector(ocMethod:)]) {
+        [instance performSelector:@selector(ocMethod:) withObject:@"我是一个OC方法"];
+    }else {
+        NSLog(@"sorry");
+    }
+}
+
+- (void)twoParam {
+    CustomClass *instance = [CustomClass new];
+    class_addMethod([CustomClass class], @selector(ocMethod::), (IMP)cfunction2, "v@:@@");
+    
+    if ([instance respondsToSelector:@selector(ocMethod::)]) {
+        [instance performSelector:@selector(ocMethod::) withObject:@"welcome" withObject:@"wolf"];
+    }else {
+        NSLog(@"sorry");
+    }
 }
 
 @end

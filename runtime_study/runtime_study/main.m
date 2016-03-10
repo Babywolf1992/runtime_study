@@ -33,7 +33,13 @@ int main(int argc, const char * argv[]) {
 //        [testclass getClassTest];
         
 /**********************  获取对象的类名  constchar *object_getClassName(id obj)  *********************/
-        [testclass getClassName];
+//        [testclass getClassName];
+        
+        
+        
+/*****************************  给类增加一个方法  ******************************/
+        [testclass oneParam];
+        [testclass twoParam];
         
     }
     return 0;
