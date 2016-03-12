@@ -55,4 +55,14 @@ void cfunction2(id self, SEL _cmd, NSString *str, NSString *name) {
     }
 }
 
+- (void)getClassAllMethod {
+    u_int count;
+    Method *methods = class_copyMethodList([NSString class], &count);
+    for (int i = 0; i < count; i++) {
+        SEL method = method_getName(methods[i]);
+        NSString *str = [NSString stringWithCString:sel_getName(method) encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",str);
+    }
+}
+
 @end

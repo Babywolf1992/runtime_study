@@ -18,4 +18,6 @@
 
 - (void)twoParam;
 
+- (void)getClassAllMethod;
+
 @end

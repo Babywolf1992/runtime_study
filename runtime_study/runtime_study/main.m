@@ -38,8 +38,13 @@ int main(int argc, const char * argv[]) {
         
         
 /*****************************  给类增加一个方法  ******************************/
-        [testclass oneParam];
-        [testclass twoParam];
+//        [testclass oneParam];
+//        [testclass twoParam];
+
+        
+/*****************************  获取一个类的所有方法  ******************************/
+        
+        [testclass getClassAllMethod];
         
     }
     return 0;
