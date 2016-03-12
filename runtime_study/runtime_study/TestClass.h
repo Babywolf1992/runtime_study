@@ -20,4 +20,6 @@
 
 - (void)getClassAllMethod;
 
+- (void)propertyNameList;
+
 @end

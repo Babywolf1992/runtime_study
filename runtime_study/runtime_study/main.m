@@ -44,7 +44,13 @@ int main(int argc, const char * argv[]) {
         
 /*****************************  获取一个类的所有方法  ******************************/
         
-        [testclass getClassAllMethod];
+//        [testclass getClassAllMethod];
+        
+        
+/*****************************  获取一个类的所有属性  ******************************/
+        
+        [testclass propertyNameList];
+        
         
     }
     return 0;

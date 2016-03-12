@@ -65,4 +65,14 @@ void cfunction2(id self, SEL _cmd, NSString *str, NSString *name) {
     }
 }
 
+- (void)propertyNameList {
+    u_int count;
+    objc_property_t *properties = class_copyPropertyList([NSString class], &count);
+    for (int i = 0; i < count; i++) {
+        const char* propertyName = property_getName(properties[i]);
+        NSString *str = [NSString stringWithCString:propertyName encoding:NSUTF8StringEncoding];
+        NSLog(@"%@",str);
+    }
+}
+
 @end
